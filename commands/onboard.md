@@ -108,20 +108,56 @@ Walk through each missing MCP one at a time:
 
 ## Step 1: Gather Project Context (Only After MCPs Verified)
 
-Once MCPs are confirmed working, gather information from all sources:
+Once MCPs are confirmed working, gather information from all sources.
 
-### Search Notion
+---
+
+### ⚠️ SLACK IS THE MOST IMPORTANT - BE EXHAUSTIVE!
+
+**Slack is where the real project context lives.** This is NOT optional - you MUST be thorough here.
+
+**Why:** Decisions, blockers, concerns, relationships, unwritten context - it's ALL in Slack threads. A consultant who reads all Slack history understands the project 10x better than one who just reads docs.
+
+**What to do:**
+
+1. **Find ALL project channels**
+   - Search for project name - there may be multiple channels
+   - Look for variations (e.g., "K&E", "kirkland", "kirkland-ellis")
+   - Check for `-internal`, `-external`, `-eng`, `-design` variants
+
+2. **Get FULL channel history**
+   - Use `limit: "30d"` minimum, or `"90d"` if the project is older
+   - Don't just get recent messages - go back to the beginning if possible
+
+3. **READ EVERY SINGLE THREAD**
+   - For EVERY message that has replies, fetch the full thread with `conversations_replies`
+   - The most important context is buried in thread replies
+   - Decisions, debates, concerns, blockers - all in threads
+
+4. **Search across ALL channels**
+   - Use `conversations_search_messages` with the project name
+   - Find mentions in #core, #delivery, #partnerships, #product, etc.
+   - People discuss projects in channels you wouldn't expect
+
+5. **Check DMs if accessible**
+   - Project-related conversations often happen in DMs
+
+**For each channel, do this:**
+```
+1. conversations_history with limit: "30d" or more
+2. For EVERY message with thread_ts/reply_count > 0:
+   → conversations_replies to get full thread
+3. Note: decisions, blockers, action items, concerns, key players
+```
+
+---
+
+### Search Notion (Important but Secondary)
 - Search for the project name
 - Find the main project hub/tracker page
 - Get PRDs, technical specs, meeting notes
 - Find onboarding docs, READMEs
 - Note the timeline and current phase
-
-### Search Slack
-- Search messages mentioning the project (last 2 weeks)
-- Find dedicated project channel(s)
-- Get key discussion threads and decisions
-- Note blockers or urgent items
 
 ### Search Airtable
 - Search for project tracking records

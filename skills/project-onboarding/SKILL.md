@@ -103,8 +103,29 @@ If all MCPs are available, confirm and proceed:
 
 Then search all sources:
 
+### ⚠️ SLACK IS THE MOST IMPORTANT SOURCE - BE EXHAUSTIVE!
+
+**Slack is where the real context lives.** Don't just skim - READ EVERYTHING:
+
+1. **Find ALL project channels** - Search for the project name, there may be multiple channels
+2. **Get FULL channel history** - Use `limit: "30d"` or more, not just recent messages
+3. **READ EVERY THREAD** - The important context is often buried in thread replies
+4. **Check DMs** - Search for project-related DMs between team members
+5. **Search broadly** - Use `conversations_search_messages` with the project name to find mentions across ALL channels
+
+**Why this matters:** Decisions, blockers, context, relationships, concerns - it's ALL in Slack threads. A consultant who reads all the Slack history will understand the project 10x better than one who just reads docs.
+
+**For each channel found:**
+```
+1. Get channel history (30+ days)
+2. For EVERY message with replies, fetch the full thread
+3. Note key decisions, blockers, action items, concerns
+4. Identify who the key players are and their communication styles
+```
+
+### Other Sources (Important but Secondary)
+
 **Notion:** Project pages, PRDs, specs, meeting notes, team info, timeline
-**Slack:** Recent messages (2 weeks), discussions, decisions, blockers
 **Airtable:** Team rosters, task tracking, project records
 **Sybill/Tribe:** Meeting transcripts, summaries, action items
 **Granola:** Additional meeting notes (if available)
