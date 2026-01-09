@@ -35,9 +35,21 @@ npm install -g @anthropic/claude-code
 ```
 
 ### 2. Install the Plugin
+
+**For personal use (recommended):**
 ```bash
-claude plugin install tribe-project-onboarding@tribe-marketplace
+claude plugin install vibe-debugger-2/tribe-project-onboarding
 ```
+
+**For a specific project (shared with team via git):**
+```bash
+claude plugin install vibe-debugger-2/tribe-project-onboarding --scope project
+```
+
+| Scope | What it means |
+|-------|---------------|
+| `user` (default) | Installed just for you, works everywhere |
+| `project` | Installed in current project, shared with anyone who clones the repo |
 
 ### 3. Run the Setup Wizard
 ```bash
@@ -112,6 +124,15 @@ A comprehensive onboarding brief including:
 | **Current Status** | Phase, milestones, blockers |
 | **Recent Activity** | Last 2 weeks of discussions and meetings |
 | **First Steps** | What to do first |
+
+---
+
+## Updating the Plugin
+
+To get the latest version:
+```bash
+claude plugin update tribe-project-onboarding
+```
 
 ---
 
