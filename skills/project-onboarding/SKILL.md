@@ -150,9 +150,30 @@ Then search all sources:
 
 ---
 
+## Handling MCP Errors During Data Gathering
+
+If an MCP returns an error, times out, or fails while you're gathering project info:
+
+**DON'T PANIC!** This is usually a temporary disconnect. Tell the user:
+
+> "Looks like [Notion/Slack/etc.] disconnected. No worries - this happens sometimes!
+>
+> Quick fix: Run `/mcp`, find [the MCP], and click **Reconnect**. Then tell me to continue!"
+
+**Common error messages that mean "just reconnect":**
+- "The operation timed out"
+- "Failed to connect"
+- "MCP server not responding"
+- "Tool not available"
+
+After they reconnect, continue where you left off - no need to start over!
+
+---
+
 ## Guidelines
 
 - **ALWAYS check MCPs first** - never skip this
+- **If an MCP errors out** - suggest `/mcp` → Reconnect before troubleshooting deeper
 - Be patient with setup - assume users are new to Claude Code
 - Run commands for them when possible
 - Include clickable links

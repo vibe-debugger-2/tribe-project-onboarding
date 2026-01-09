@@ -85,7 +85,21 @@ cd ~/tribe-mcp && uv sync
 cd ~/granola-ai-mcp-server && npm install && npm run build
 ```
 
-### 3. General Troubleshooting
+### 3. Quick Fix: Reconnect via /mcp (Try This First!)
+
+**MCPs often just need a quick reconnect.** When you get errors like "timed out", "failed to connect", or tools just aren't working:
+
+1. Type `/mcp` in Claude Code
+2. Find the MCP that's having issues (Notion, Slack, etc.)
+3. Select it and click **"Reconnect"**
+4. Try your request again
+
+This fixes the problem 90% of the time! MCPs can disconnect due to network hiccups, idle timeouts, or temporary service issues.
+
+**Tell the user:**
+> "Looks like [Notion/Slack/etc.] disconnected. No worries - just run `/mcp`, select it, and hit Reconnect. Then try again!"
+
+### 4. General Troubleshooting
 
 **"All MCPs disconnected"**
 1. Run `/mcp` and try reconnecting each one
@@ -101,7 +115,7 @@ cd ~/granola-ai-mcp-server && npm install && npm run build
 - May need to fix file permissions
 - Try running commands with full paths
 
-### 4. Reset & Start Fresh
+### 5. Reset & Start Fresh
 
 If nothing works, help them start fresh:
 
@@ -117,7 +131,7 @@ claude mcp remove granola
 /tribe-project-onboarding:setup
 ```
 
-### 5. Get Help
+### 6. Get Help
 
 If still stuck:
 - Post in #help-board on Slack with the error message
