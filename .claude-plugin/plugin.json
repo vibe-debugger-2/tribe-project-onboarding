@@ -1,0 +1,20 @@
+{
+  "name": "tribe-project-onboarding",
+  "description": "AI-powered project onboarding assistant for Tribe consultants. Instantly get up to speed on any project with context from Notion, Slack, Airtable, and meeting transcripts.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Andrew Enns",
+    "email": "andrew@tribe.ai"
+  },
+  "repository": "https://github.com/tribe-ai/tribe-project-onboarding",
+  "license": "MIT",
+  "keywords": [
+    "onboarding",
+    "project-management",
+    "tribe",
+    "notion",
+    "slack",
+    "airtable",
+    "transcripts"
+  ]
+}
